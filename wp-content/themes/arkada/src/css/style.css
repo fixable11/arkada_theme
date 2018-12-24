@@ -1,0 +1,697 @@
+
+/* Font faces */
+@font-face {
+    font-family: 'Gotham_bold';
+    src: url('assets/fonts/GothamPro-Bold.eot');
+    src: url('assets/fonts/GothamPro-Bold.eot?#iefix') format('embedded-opentype'), url('assets/fonts/GothamPro-Bold.woff') format('woff'), url('assets/fonts/GothamPro-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Gotham_reg';
+    src: url('assets/fonts/GothamPro.eot');
+    src: url('assets/fonts/GothamPro.eot?#iefix') format('embedded-opentype'), url('assets/fonts/GothamPro.woff') format('woff'), url('assets/fonts/GothamPro.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Gotham_med';
+    src: url('assets/fonts/GothamPro-Medium.eot');
+    src: url('assets/fonts/GothamPro-Medium.eot?#iefix') format('embedded-opentype'), url('assets/fonts/GothamPro-Medium.woff') format('woff'), url('assets/fonts/GothamPro-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+  }
+  /* Colors */
+  /* Basic settings */
+  html {
+    font-size: 10px;
+  }
+  section {
+    overflow: hidden;
+    padding: 6rem 0;
+  }
+  iframe {
+    width: 100%;
+    height: 100%;
+    frameborder: 0;
+    border: 0;
+  }
+  .button-small {
+    border: none;
+    padding: 1.7rem 3rem;
+    background-color: #fe9c10;
+    font-family: 'Gotham_med', sans-serif;
+    color: #ffffff;
+    font-size: 1.1rem;
+  }
+  a:hover {
+    text-decoration: none;
+  }
+  button:focus,
+  input:focus,
+  a:focus,
+  textarea:focus {
+    outline: none;
+    text-decoration: none;
+  }
+  .wrap {
+    display: table;
+    width: 100%;
+    height: 4.5rem;
+  }
+  .wrap-block {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  /* Стили бургера */
+  .slicknav_menu {
+    display: none;
+    background-color: #0393ef;
+  }
+  /* Слайдер */
+  .slick-slide {
+    padding: 0 3rem;
+  }
+  .slick-active {
+    outline: none;
+  }
+  .prev {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    transform: translateX(-100%) translateY(100%);
+    border: none;
+    width: 2.5rem;
+    height: 3.5rem;
+    background: url(assets/img/example/left.png) center no-repeat;
+    background-size: 100%;
+  }
+  .next {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    transform: translateX(100%) translateY(100%);
+    border: none;
+    width: 2.5rem;
+    height: 3.5rem;
+    background: url(assets/img/example/right.png) center no-repeat;
+    background-size: 100%;
+  }
+  /* Стили формы */
+  .form {
+    margin-top: 7rem;
+  }
+  .form input {
+    margin-bottom: 3rem;
+    width: 100%;
+    border: none;
+    display: inline-block;
+    background-color: #f7f7f7;
+    padding: 2rem 7rem 2rem 2.5rem;
+  }
+  .form input::-webkit-input-placeholder {
+    font-family: 'Gotham_reg', sans-serif;
+    font-size: 1.2rem;
+  }
+  .form button {
+    margin-bottom: 2rem;
+    width: 100%;
+    border: none;
+    padding: 2.5rem 5rem;
+    background-color: #fe9c10;
+    font-family: 'Gotham_bold', sans-serif;
+    color: #ffffff;
+    font-size: 1.4rem;
+  }
+  .form p {
+    font-family: 'Gotham_reg', sans-serif;
+    color: #000000;
+    font-size: 1.2rem;
+  }
+  /* Верхнее меню */
+  .header {
+    background-color: #ffffff;
+    padding: 3rem 0;
+  }
+  .header-ul {
+    margin: 0;
+    padding: 0;
+    padding-left: 2rem;
+  }
+  .header-ul li {
+    display: inline-block;
+    text-transform: uppercase;
+    font-family: 'Gotham_med', sans-serif;
+    font-size: 1.2rem;
+    line-height: 0;
+  }
+  .header-ul li a {
+    color: #000000;
+  }
+  .header-ul li a:hover,
+  .header-ul li a:active {
+    color: #116ff1;
+  }
+  .header-ul li:nth-child(n + 1) {
+    margin-right: 3rem;
+  }
+  .header-phone {
+    font-family: 'Gotham_bold', sans-serif;
+    font-size: 1.8rem;
+    color: #000000;
+  }
+  /* Главный экран */
+  .main {
+    padding-top: 7rem;
+    background: #ffffff;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+  .main h1 {
+    font-family: 'Gotham_bold', sans-serif;
+    color: #ffffff;
+    font-size: 4rem;
+    text-transform: uppercase;
+  }
+  .main h2 {
+    margin-bottom: 5rem;
+    font-family: 'Gotham_bold', sans-serif;
+    color: #ffffff;
+    font-size: 1.8rem;
+  }
+  .main-feature {
+    display: block;
+    margin-bottom: 4rem;
+  }
+  .main-feature-p {
+    margin-left: 2rem;
+    transform: translateY(0.7rem);
+    margin-bottom: 0;
+    line-height: 100%;
+    display: inline-block;
+    font-family: 'Gotham_med', sans-serif;
+    color: #ffffff;
+    font-size: 1.4rem;
+  }
+  .main-cta-block {
+    margin-top: 5rem;
+    padding: 6rem 0rem;
+    background: #ffffff url(assets/img/main/door.png) right bottom no-repeat;
+  }
+  .main-cta-block b {
+    display: block;
+  }
+  .main-cta {
+    margin-bottom: 2rem;
+    font-family: 'Gotham_bold', sans-serif;
+    color: #000000;
+    font-size: 2.4rem;
+    line-height: 0.917;
+  }
+  .main-cta-sub {
+    font-family: 'Gotham_bold', sans-serif;
+    color: #000000;
+    font-size: 2rem;
+    line-height: 1.1;
+  }
+  .main-cta-sub span {
+    background: #ffffff url(assets/img/main/orange-bg.png) bottom no-repeat;
+    background-size: 100% 50%;
+  }
+  /* Преимущества */
+  .features {
+    background-color: #18355d;
+  }
+  .features .media h2 {
+    font-family: 'Gotham_med', sans-serif;
+    font-size: 1.8rem;
+    color: #ffffff;
+  }
+  .features .media p {
+    margin-top: 1.5rem;
+    font-family: 'Gotham_reg', sans-serif;
+    font-size: 1.4rem;
+    color: #ffffff;
+  }
+  /* Магазин */
+  .shop .active {
+    display: block;
+  }
+  .shop .active-color {
+    color: #116ff1;
+  }
+  .shop h2 {
+    margin-bottom: 4rem;
+    font-family: 'Gotham_bold', sans-serif;
+    font-size: 2.4rem;
+    color: #000000;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  .shop-ul {
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+  .shop-ul li {
+    margin-bottom: 3rem;
+    display: inline-block;
+    text-transform: uppercase;
+    font-family: 'Gotham_med', sans-serif;
+    color: #18355d;
+    font-size: 1.4rem;
+    line-height: 0;
+  }
+  .shop-ul li a {
+    color: #18355d;
+  }
+  .shop-ul li a:active {
+    color: #116ff1;
+  }
+  .shop-ul li:nth-child(n + 1) {
+    margin-right: 3rem;
+  }
+  .shop-cards {
+    display: none;
+  }
+  .shop-card {
+    margin-bottom: 5rem;
+    text-align: center;
+  }
+  .shop-card img {
+    width: 27rem;
+    height: 20rem;
+  }
+  .shop-card h3 {
+    font-family: 'Gotham_reg', sans-serif;
+    font-size: 1.8rem;
+    color: #18355d;
+    text-decoration: underline;
+  }
+  .shop-card p {
+    font-family: 'Gotham_reg', sans-serif;
+    font-size: 1.4rem;
+  }
+  .shop-card span {
+    display: block;
+    font-family: 'Gotham_reg', sans-serif;
+    font-size: 1.4rem;
+    color: #a3a3a3;
+  }
+  .shop-card b {
+    display: block;
+    margin-bottom: 2rem;
+    font-family: 'Gotham_med', sans-serif;
+    font-size: 2rem;
+  }
+  .shop-card button {
+    width: 100%;
+    font-size: 1.4rem;
+  }
+  /* Примеры работ */
+  .example {
+    position: relative;
+    padding-bottom: 9rem;
+    background-color: #ecf4fb;
+  }
+  .example h2 {
+    margin-bottom: 4rem;
+    font-family: 'Gotham_bold', sans-serif;
+    font-size: 2.4rem;
+    color: #000000;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  /* Дома */
+  .houses .house {
+    margin-bottom: 3rem;
+  }
+  .houses .house h2 {
+    font-family: 'Gotham_bold', sans-serif;
+    font-size: 2.4rem;
+    margin-top: 9rem;
+    margin-bottom: 7rem;
+    text-transform: uppercase;
+  }
+  .houses .house ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 8rem;
+  }
+  .houses .house ul li {
+    font-family: 'Gotham_reg', sans-serif;
+    font-size: 1.8rem;
+    margin-bottom: 3rem;
+  }
+  .houses .house ul li:before {
+    content: '';
+    display: inline-block;
+    margin-right: 1.5rem;
+    width: 3rem;
+    height: 2.3rem;
+    background: url(assets/img/houses/check.png) no-repeat center;
+    background-size: 100%;
+    transform: translateY(15%);
+  }
+  .house {
+    background-color: #ffffff;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  
+  /* Кровельные работы */
+  .upsell {
+    background-color: #ecf4fb;
+  }
+  .upsell h2 {
+    margin-bottom: 7rem;
+    font-family: 'Gotham_bold', sans-serif;
+    font-size: 2.4rem;
+    color: #000000;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  .upsell-desc {
+    font-family: 'Gotham_reg', sans-serif;
+    font-size: 1.6rem;
+    color: #000000;
+    text-align: center;
+    margin-bottom: 6rem;
+  }
+  .upsell-block {
+    margin-bottom: 5rem;
+    text-align: center;
+  }
+  .upsell-block img {
+    margin-bottom: 3rem;
+  }
+  .upsell-block b {
+    display: block;
+    font-family: 'Gotham_med', sans-serif;
+    font-size: 1.6rem;
+    color: #000000;
+  }
+  .upsell-more {
+    margin-top: 4rem;
+    font-family: 'Gotham_reg', sans-serif;
+    font-size: 2rem;
+    text-align: center;
+  }
+  .upsell-cta-block {
+    background: #ffffff url(assets/img/upsell/bg.jpg) center no-repeat;
+  }
+  /* Отзывы */
+  .review {
+    padding-bottom: 9rem;
+  }
+  .review h2 {
+    margin-bottom: 7rem;
+    font-family: 'Gotham_bold', sans-serif;
+    font-size: 2.4rem;
+    color: #000000;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  .review-avatar {
+    width: 100%;
+    margin-left: 8%;
+    margin-bottom: 3rem;
+  }
+  .review-avatar-name {
+    display: inline-block;
+    margin-left: 1rem;
+    transform: translateY(30%);
+    font-family: 'Gotham_reg', sans-serif;
+    font-size: 1.5rem;
+  }
+  .review-block-text {
+    position: relative;
+    width: 100%;
+    border: 3px solid #daebec;
+    padding: 2rem 3rem 4rem 3rem;
+  }
+  .review-block-text h3 {
+    font-family: 'Gotham_med', sans-serif;
+    font-size: 1.7rem;
+    margin-bottom: 3rem;
+  }
+  .review-block-text p {
+    font-family: 'Gotham_reg', sans-serif;
+    font-size: 1.5rem;
+  }
+  .review-block-text:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    display: inline-block;
+    width: 5rem;
+    height: 5rem;
+    background: url(assets/img/review/1.png) no-repeat center;
+    background-size: 100%;
+    transform: translateY(-70%) translateX(100%);
+  }
+  /* Контакты */
+  .contacts {
+    padding: 6rem 0;
+    background-color: #18355d;
+  }
+  .contacts-block {
+    text-align: center;
+    margin-bottom: 0rem;
+    margin-top: 2rem;
+  }
+  .contacts-block img {
+    margin-bottom: 3rem;
+  }
+  .contacts-block-phone {
+    display: block;
+    font-family: 'Gotham_bold', sans-serif;
+    font-size: 1.8rem;
+    color: #ffffff;
+  }
+  .contacts-block a,
+  .contacts-block p {
+    display: block;
+    font-family: 'Gotham_reg', sans-serif;
+    font-size: 1.8rem;
+    color: #ffffff;
+  }
+  /*Карта*/
+  .map {
+    height: 47rem;
+    padding: 0;
+  }
+  /*Вопросы*/
+  .question {
+    background-color: #ecf4fb;
+    text-align: center;
+  }
+  .question h2 {
+    display: inline-block;
+    font-family: 'Gotham_reg', sans-serif;
+    font-size: 3rem;
+  }
+  .question a {
+    margin-left: 5rem;
+    display: inline-block;
+    font-family: 'Gotham_reg', sans-serif;
+    font-size: 2.4rem;
+    color: #116ff1;
+    text-decoration: underline;
+  }
+  footer {
+    background-color: #18355d;
+    padding: 6rem 0;
+  }
+  footer p {
+    color: #ffffff;
+    font-size: 2rem;
+  }
+  footer p a {
+    color: #2dc115;
+  }
+  /* Popup */
+  .popup {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .popup-content {
+    width: 30%;
+    position: fixed;
+    left: 50%;
+    top: 10%;
+    background-color: #ffffff;
+    transform: translateX(-50%);
+    padding: 4rem 6rem;
+  }
+  .popup-form {
+    margin-top: 3rem;
+    padding: 0;
+  }
+  .popup-close {
+    position: absolute;
+    top: -1.5rem;
+    right: -2rem;
+    width: 2rem;
+    text-align: center;
+    border: none;
+    background-color: transparent;
+    font-size: 3rem;
+    color: #ffffff;
+  }
+  .popup-content {
+    text-align: center;
+  }
+  .popup-header {
+    font-family: 'Gotham_bold', sans-serif;
+  }
+  .popup-thanks p {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+  }
+  @media (max-width: 1199px) {
+    .popup-content {
+      width: 60%;
+    }
+    .header-ul li:nth-child(n + 1) {
+      margin-right: 2.5rem;
+    }
+    .header-phone {
+      font-size: 1.5rem;
+    }
+    .button-small {
+      padding: 1.7rem 1.6rem;
+    }
+  }
+  @media (max-width: 991px) {
+    .header {
+      text-align: center;
+    }
+    .header-phone {
+      text-align: center;
+    }
+    .slicknav_menu {
+      display: block;
+    }
+    #menu {
+      display: none;
+    }
+    #menu-div {
+      display: none;
+    }
+    .main-cta-block {
+      background: none;
+      background-color: #ffffff;
+    }
+    .features {
+      padding-top: 6rem;
+    }
+    .features .media {
+      margin-bottom: 3rem;
+    }
+    .houses .house {
+      text-align: left;
+    }
+    .houses .house-1 {
+      background: #ffffff url(assets/img/houses/1.jpg) 100% center no-repeat;
+      background-size: cover;
+    }
+    .houses .house-2 {
+      background: #ffffff url(assets/img/houses/2.jpg) 100% center no-repeat;
+      background-size: cover;
+    }
+    .houses .house-3 {
+      background: #ffffff url(assets/img/houses/3.jpg) 100% center no-repeat;
+      background-size: cover;
+    }
+  }
+  @media (max-width: 767px) {
+    .popup-content {
+      width: 85%;
+    }
+    .shop-card button {
+      width: 70%;
+    }
+    .houses .house h2 {
+      text-align: center;
+    }
+    .houses .house ul li {
+      text-align: center;
+    }
+    .houses .house-1 {
+      background: #ffffff url(assets/img/houses/1.jpg) 100% center no-repeat;
+      background-size: cover;
+    }
+    .houses .house-2 {
+      background: #ffffff url(assets/img/houses/2.jpg) 100% center no-repeat;
+      background-size: cover;
+    }
+    .houses .house-3 {
+      background: #ffffff url(assets/img/houses/3.jpg) 100% center no-repeat;
+      background-size: cover;
+    }
+  }
+  @media (max-width: 672px) {
+    .question a {
+      margin-left: 0;
+      display: block;
+    }
+    .houses .house-1 {
+      background-image: none;
+      background-color: #ecf4fb;
+    }
+    .houses .house-2 {
+      background-image: none;
+      background-color: #ecf4fb;
+    }
+    .houses .house-3 {
+      background-image: none;
+      background-color: #ecf4fb;
+    }
+  }
+  @media (max-width: 512px) {
+    .houses .house h2 {
+      text-align: center;
+    }
+    .houses .house ul li {
+      text-align: left;
+    }
+  }
+  @media (max-width: 390px) {
+    .popup-content #third-btn {
+      text-align: center;
+      font-size: 1.2rem;
+    }
+    .shop-ul li {
+      display: block;
+    }
+    .houses .house h2 {
+      text-align: center;
+    }
+    .houses .house ul li {
+      text-align: left;
+    }
+  }
+  
+  .custom-logo-link{
+    display: block;
+    max-width: 100%;
+  }
+
+  .custom-logo-link img{
+    max-width: 100%;
+    height: auto;
+  }

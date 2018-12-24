@@ -1,0 +1,6 @@
+/*
+Theme Name: Arkada
+Author: Fixable
+Author URI: https://wordpress.org/
+Description: Arkada theme
+*/
